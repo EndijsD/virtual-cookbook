@@ -17,6 +17,7 @@ export const Title = styled(Link)`
   font-size: 30px;
   color: white;
   font-weight: bold;
+  cursor: pointer;
 `;
 
 export const Label = styled.label`
@@ -48,6 +49,7 @@ export const Create = styled(Link)`
   padding: 0.3rem 0.5rem;
   border-radius: 5px;
   margin-left: 2rem;
+  cursor: pointer;
 
   &:hover {
     border: 1px solid #ccc;
