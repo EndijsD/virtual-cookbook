@@ -1,10 +1,14 @@
+import { useContext } from 'react';
+import { DataContext } from '../../contexts/DataContext';
 import * as S from './style';
 
-const RecipeList = ({ recipes }) => {
+const RecipeList = () => {
+  const fetch = useContext(DataContext);
+
   return (
     <S.Content>
-      {recipes.map((recipe) => (
-        <S.Item>
+      {fetch.data.map((recipe) => (
+        <S.Item key={recipe.id}>
           <div>
             <S.H1>{recipe.title}</S.H1>
             <S.H2>{recipe.time} minutes to make.</S.H2>

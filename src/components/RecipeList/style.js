@@ -6,6 +6,11 @@ export const Content = styled.div`
   grid-template-columns: repeat(auto-fit, 20rem);
   margin: 3rem 12rem;
   gap: 2rem;
+  justify-content: center;
+
+  @media (max-width: 1410px) {
+    margin: 3rem 8rem;
+  }
 `;
 
 export const Item = styled.div`
