@@ -11,6 +11,15 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 1100px) {
+    margin: 0 2rem;
+  }
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    gap: 1rem;
+  }
 `;
 
 export const Title = styled(Link)`
@@ -18,6 +27,14 @@ export const Title = styled(Link)`
   color: white;
   font-weight: bold;
   cursor: pointer;
+`;
+
+export const Div = styled.div`
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const Label = styled.label`
@@ -39,6 +56,11 @@ export const Search = styled.input`
   &:focus {
     background: #ccc;
   }
+
+  @media (max-width: 600px) {
+    margin: 0;
+    margin-top: 0.3rem;
+  }
 `;
 
 export const Create = styled(Link)`
@@ -58,5 +80,10 @@ export const Create = styled(Link)`
   &:active {
     border: 1px solid #999;
     color: #999;
+  }
+
+  @media (max-width: 600px) {
+    margin: 0;
+    margin-top: 1rem;
   }
 `;

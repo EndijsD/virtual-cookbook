@@ -1,9 +1,8 @@
-import { useContext } from 'react';
-import { DataContext } from '../../contexts/DataContext';
+import { useData } from '../../hooks/useData';
 import * as S from './style';
 
 const RecipeList = () => {
-  const fetch = useContext(DataContext);
+  const { fetch } = useData();
 
   return (
     <S.Content>

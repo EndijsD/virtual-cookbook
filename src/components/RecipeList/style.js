@@ -11,6 +11,10 @@ export const Content = styled.div`
   @media (max-width: 1410px) {
     margin: 3rem 8rem;
   }
+
+  @media (max-width: 1100px) {
+    margin: 3rem 2rem;
+  }
 `;
 
 export const Item = styled.div`
