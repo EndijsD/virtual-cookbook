@@ -5,8 +5,8 @@ export const DataContext = createContext();
 
 const dataReducer = (state, action) => {
   switch (action.type) {
-    case 'CHANGE_DATA':
-      return { ...state, fetch: action.payload };
+    case 'UPDATE_DATA':
+      return { ...state, data: action.payload };
     default:
       return state;
   }
@@ -14,19 +14,26 @@ const dataReducer = (state, action) => {
 
 export const DataProvider = ({ children }) => {
   const [state, dispatch] = useReducer(dataReducer, {
-    fetch: {},
+    data: {},
   });
 
-  const { data, isPending, error } = useFetch(
-    'http://192.168.1.8:3001/recipes'
-  );
+  const {
+    data: recipes,
+    isPending,
+    error,
+  } = useFetch('http://192.168.1.8:3001/recipes');
 
   useEffect(() => {
-    dispatch({ type: 'CHANGE_DATA', payload: { data, isPending, error } });
-  }, [data, error, isPending]);
+    dispatch({ type: 'UPDATE_DATA', payload: { recipes, isPending, error } });
+    //fetchDataInApp({ recipes, isPending, error });
+  }, [recipes, isPending, error]);
+
+  const fetchDataInApp = (data) => {
+    dispatch({ type: 'UPDATE_DATA', payload: data });
+  };
 
   return (
-    <DataContext.Provider value={{ ...state, dispatch }}>
+    <DataContext.Provider value={{ ...state, fetchDataInApp }}>
       {children}
     </DataContext.Provider>
   );

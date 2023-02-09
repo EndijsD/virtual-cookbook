@@ -3,14 +3,14 @@ import RecipeList from '../RecipeList/RecipeList';
 import * as S from './style';
 
 const Home = () => {
-  const { fetch } = useData();
-  const { data, isPending, error } = fetch;
+  const { data } = useData();
+  const { recipes, isPending, error } = data;
 
   return (
     <>
       {isPending && <S.Message>Loading...</S.Message>}
       {error && <S.Message>{error}</S.Message>}
-      {data && <RecipeList />}
+      {recipes && <RecipeList />}
     </>
   );
 };

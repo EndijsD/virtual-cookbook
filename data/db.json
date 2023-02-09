@@ -4,28 +4,28 @@
       "title": "Veggie Stew",
       "ingredients": ["first", "second"],
       "method": "some method some method some method some method some method",
-      "time": 30,
+      "time": "30",
       "id": 1
     },
     {
       "title": "Veggie Pizza",
       "ingredients": ["first", "second"],
       "method": "some method some method some method some method",
-      "time": 40,
+      "time": "40",
       "id": 2
     },
     {
       "title": "Greek Salad",
       "ingredients": ["first", "second"],
       "method": "some method some method",
-      "time": 80,
+      "time": "80",
       "id": 3
     },
     {
       "title": "Pancakes",
       "ingredients": ["first", "second"],
       "method": "some method some method some method",
-      "time": 50,
+      "time": "50",
       "id": 4
     }
   ]

@@ -2,11 +2,11 @@ import { useData } from '../../hooks/useData';
 import * as S from './style';
 
 const RecipeList = () => {
-  const { fetch } = useData();
+  const { data } = useData();
 
   return (
     <S.Content>
-      {fetch.data.map((recipe) => (
+      {data.recipes.map((recipe) => (
         <S.Item key={recipe.id}>
           <div>
             <S.H1>{recipe.title}</S.H1>
