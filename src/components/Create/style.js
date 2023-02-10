@@ -50,6 +50,7 @@ const sharedButtonStyle = css`
   border-radius: 5px;
   font-size: 25px;
   font-weight: 700;
+  cursor: pointer;
 
   &:hover {
     color: #ccc;
