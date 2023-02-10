@@ -1,6 +1,4 @@
-import { createContext, useReducer, useEffect } from 'react';
-import useFetch from '../hooks/useFetch';
-import { url } from '../url';
+import { createContext, useReducer } from 'react';
 
 export const DataContext = createContext();
 
@@ -8,6 +6,8 @@ const dataReducer = (state, action) => {
   switch (action.type) {
     case 'UPDATE_DATA':
       return { ...state, data: action.payload };
+    case 'UPDATE_SEARCH_INPUT':
+      return { ...state, searchInput: action.payload };
     default:
       return state;
   }
@@ -16,25 +16,21 @@ const dataReducer = (state, action) => {
 export const DataProvider = ({ children }) => {
   const [state, dispatch] = useReducer(dataReducer, {
     data: {},
+    searchInput: '',
   });
-
-  const {
-    data: recipes,
-    isPending,
-    error,
-  } = useFetch('http://' + url + '/recipes');
-
-  useEffect(() => {
-    dispatch({ type: 'UPDATE_DATA', payload: { recipes, isPending, error } });
-    //fetchDataInApp({ recipes, isPending, error });
-  }, [recipes, isPending, error]);
 
   const fetchDataInApp = (data) => {
     dispatch({ type: 'UPDATE_DATA', payload: data });
   };
 
+  const updateSearchInput = (data) => {
+    dispatch({ type: 'UPDATE_SEARCH_INPUT', payload: data });
+  };
+
   return (
-    <DataContext.Provider value={{ ...state, fetchDataInApp }}>
+    <DataContext.Provider
+      value={{ ...state, fetchDataInApp, updateSearchInput }}
+    >
       {children}
     </DataContext.Provider>
   );

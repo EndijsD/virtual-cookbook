@@ -2,11 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Content = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 20rem);
   margin: 3rem 12rem;
-  gap: 2rem;
-  justify-content: center;
 
   @media (max-width: 1410px) {
     margin: 3rem 8rem;
@@ -15,6 +11,13 @@ export const Content = styled.div`
   @media (max-width: 1100px) {
     margin: 3rem 2rem;
   }
+`;
+
+export const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 20rem);
+  gap: 2rem;
+  justify-content: center;
 `;
 
 export const Item = styled.div`
@@ -29,6 +32,13 @@ export const Item = styled.div`
   &:hover {
     transform: rotate(5deg);
   }
+`;
+
+export const Title = styled.h1`
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 2rem;
+  text-align: center;
 `;
 
 export const H1 = styled.h1`
