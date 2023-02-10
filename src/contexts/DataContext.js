@@ -1,5 +1,6 @@
 import { createContext, useReducer, useEffect } from 'react';
 import useFetch from '../hooks/useFetch';
+import { url } from '../url';
 
 export const DataContext = createContext();
 
@@ -21,7 +22,7 @@ export const DataProvider = ({ children }) => {
     data: recipes,
     isPending,
     error,
-  } = useFetch('http://192.168.1.8:3001/recipes');
+  } = useFetch('http://' + url + '/recipes');
 
   useEffect(() => {
     dispatch({ type: 'UPDATE_DATA', payload: { recipes, isPending, error } });

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import * as S from './style';
 import { useNavigate } from 'react-router-dom';
+import { url } from '../../url';
 
 const initialValues = {
   title: '',
@@ -20,7 +21,7 @@ const Create = () => {
 
     setIsPending(true);
 
-    fetch('http://192.168.1.8:3001/recipes', {
+    fetch('http://' + url + '/recipes', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formValues),
