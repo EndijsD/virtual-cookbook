@@ -2,31 +2,65 @@
   "recipes": [
     {
       "title": "Veggie Stew",
-      "ingredients": ["first", "second"],
+      "ingredients": [
+        "first",
+        "second"
+      ],
       "method": "some method some method some method some method some method",
       "time": "30",
       "id": 1
     },
     {
       "title": "Veggie Pizza",
-      "ingredients": ["first", "second"],
+      "ingredients": [
+        "first",
+        "second"
+      ],
       "method": "some method some method some method some method",
       "time": "40",
       "id": 2
     },
     {
       "title": "Greek Salad",
-      "ingredients": ["first", "second"],
+      "ingredients": [
+        "first",
+        "second"
+      ],
       "method": "some method some method",
       "time": "80",
       "id": 3
     },
     {
       "title": "Pancakes",
-      "ingredients": ["first", "second"],
+      "ingredients": [
+        "first",
+        "second"
+      ],
       "method": "some method some method some method",
       "time": "50",
       "id": 4
+    },
+    {
+      "title": "1",
+      "ingredients": [
+        "1",
+        "1",
+        "1"
+      ],
+      "method": "1",
+      "time": "1",
+      "id": 5
+    },
+    {
+      "title": "2",
+      "ingredients": [
+        "2",
+        "2",
+        "2"
+      ],
+      "method": "2",
+      "time": "2",
+      "id": 6
     }
   ]
 }

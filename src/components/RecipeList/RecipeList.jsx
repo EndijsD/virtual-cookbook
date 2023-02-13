@@ -9,7 +9,9 @@ const RecipeList = () => {
       {searchInput && <S.Title>Recipes including {searchInput}</S.Title>}
       <S.Grid>
         {data.recipes
-          .filter((recipe) => recipe.title.toLowerCase().includes(searchInput))
+          .filter((recipe) =>
+            recipe.title.toLowerCase().includes(searchInput.toLowerCase())
+          )
           .map((recipe) => (
             <S.Item key={recipe.id}>
               <div>
