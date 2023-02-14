@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import Home from '../components/Home/Home';
-import { useData } from '../hooks/useData';
+import useData from '../hooks/useData';
 import useFetch from '../hooks/useFetch';
-import { url } from '../url';
+import url from '../url';
 
 const Homepage = ({ page }) => {
   const { fetchDataInApp } = useData();

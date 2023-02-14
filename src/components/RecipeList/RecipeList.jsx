@@ -1,4 +1,4 @@
-import { useData } from '../../hooks/useData';
+import useData from '../../hooks/useData';
 import * as S from './style';
 
 const RecipeList = () => {

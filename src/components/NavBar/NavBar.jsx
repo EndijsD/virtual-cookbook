@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useData } from '../../hooks/useData';
+import useData from '../../hooks/useData';
 import * as S from './style';
 
 const NavBar = () => {

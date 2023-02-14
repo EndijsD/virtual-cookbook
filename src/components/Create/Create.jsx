@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import * as S from './style';
 import { useNavigate } from 'react-router-dom';
-import { url } from '../../url';
+import url from '../../url';
 
 const initialValues = {
   title: '',

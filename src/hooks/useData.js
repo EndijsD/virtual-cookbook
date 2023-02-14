@@ -2,7 +2,7 @@
 // import { useContext } from 'react';
 // import { DataContext } from '../contexts/DataContext';
 
-// export const useData = () => {
+// const useData = () => {
 //   const context = useContext(DataContext);
 
 //   if (!context) throw Error('useData() must be used inside DataProvider');
@@ -15,7 +15,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { UPDATE_DATA, UPDATE_SEARCH_INPUT } from '../redux/DataRedux';
 
-export const useData = () => {
+const useData = () => {
   const redux = useSelector((state) => state.DataRedux);
   const dispatch = useDispatch();
 
@@ -32,3 +32,6 @@ export const useData = () => {
 
   return { ...redux, fetchDataInApp, updateSearchInput };
 };
+
+// FOR BOTH EXPORT
+export default useData;

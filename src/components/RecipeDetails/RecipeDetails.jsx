@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { useData } from '../../hooks/useData';
+import useData from '../../hooks/useData';
 import NotFound from '../NotFound/NotFound';
 import * as S from './style';
 

@@ -1,4 +1,4 @@
-import { useData } from '../../hooks/useData';
+import useData from '../../hooks/useData';
 import RecipeDetails from '../RecipeDetails/RecipeDetails';
 import RecipeList from '../RecipeList/RecipeList';
 import * as S from './style';
