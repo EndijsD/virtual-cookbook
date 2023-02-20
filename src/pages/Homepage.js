@@ -6,11 +6,7 @@ import url from '../url';
 
 const Homepage = ({ page }) => {
   const { fetchDataInApp } = useData();
-  const {
-    data: recipes,
-    isPending,
-    error,
-  } = useFetch('http://' + url + '/recipes');
+  const { data: recipes, isPending, error } = useFetch(url);
 
   useEffect(() => {
     fetchDataInApp({ recipes, isPending, error });

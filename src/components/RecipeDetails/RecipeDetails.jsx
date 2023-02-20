@@ -6,7 +6,7 @@ import * as S from './style';
 const RecipeDetails = () => {
   const { id } = useParams();
   const { data } = useData();
-  const recipe = data.recipes.find((recipe) => recipe.id === Number(id));
+  const recipe = data.recipes.find((recipe) => String(recipe._id) === id);
 
   return (
     <>

@@ -13,13 +13,13 @@ const RecipeList = () => {
             recipe.title.toLowerCase().includes(searchInput.toLowerCase())
           )
           .map((recipe) => (
-            <S.Item key={recipe.id}>
+            <S.Item key={recipe._id}>
               <div>
                 <S.H1>{recipe.title}</S.H1>
                 <S.H2>{recipe.time} minutes to make.</S.H2>
               </div>
               <S.P>{recipe.method}</S.P>
-              <S.StyledLink to={`/recipes/${recipe.id}`}>
+              <S.StyledLink to={`/recipes/${recipe._id}`}>
                 Cook this
               </S.StyledLink>
             </S.Item>
